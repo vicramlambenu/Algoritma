@@ -63,6 +63,8 @@ bubble_sort_time = time.time() - start_time
 print("Original Data: ", random_numbers)
 print("\nSorted with Merge Sort: ", merge_sort_data)
 print("Time taken by Merge Sort: {:.6f} seconds".format(merge_sort_time))
+print("\nSorted with Bubble Sort: ", bubble_sort_data)
+print("Time taken by Bubble Sort: {:.6f} seconds".format(bubble_sort_time))
 
 # ---- PSEUDOCODE ----
 
@@ -114,6 +116,3 @@ print("Time taken by Merge Sort: {:.6f} seconds".format(merge_sort_time))
 # Kasus terbaik adalah O(n), ketika array sudah terurut. Bubble Sort tidak memerlukan ruang tambahan selain beberapa variabel untuk menukar elemen, 
 # sehingga kompleksitas ruangnya adalah O(1).
 
-
-print("\nSorted with Bubble Sort: ", bubble_sort_data)
-print("Time taken by Bubble Sort: {:.6f} seconds".format(bubble_sort_time))
