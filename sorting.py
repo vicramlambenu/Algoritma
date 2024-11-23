@@ -64,5 +64,56 @@ print("Original Data: ", random_numbers)
 print("\nSorted with Merge Sort: ", merge_sort_data)
 print("Time taken by Merge Sort: {:.6f} seconds".format(merge_sort_time))
 
+# ---- PSEUDOCODE ----
+
+# FUNCTION MergeSort(array):
+#     IF length(array) > 1:
+#         mid = length(array) // 2
+#         left_half = array[0:mid]
+#         right_half = array[mid:length(array)]
+#
+#         CALL MergeSort(left_half)
+#         CALL MergeSort(right_half)
+#
+#         i = j = k = 0
+#         WHILE i < length(left_half) AND j < length(right_half):
+#             IF left_half[i] < right_half[j]:
+#                 array[k] = left_half[i]
+#                 i = i + 1
+#             ELSE:
+#                 array[k] = right_half[j]
+#                 j = j + 1
+#             k = k + 1
+#
+#         WHILE i < length(left_half):
+#             array[k] = left_half[i]
+#             i = i + 1
+#             k = k + 1
+#
+#         WHILE j < length(right_half):
+#             array[k] = right_half[j]
+#             j = j + 1
+#             k = k + 1
+#
+# FUNCTION BubbleSort(array):
+#     n = length(array)
+#     FOR i FROM 0 TO n-1:
+#         FOR j FROM 0 TO n-i-2:
+#             IF array[j] > array[j+1]:
+#                 SWAP(array[j], array[j+1])
+
+# ---- ANALYSIS ----
+# Merge Sort Analysis:
+#algoritma divide-and-conquer yang membagi array menjadi dua bagian yang lebih kecil, mengurutkan setiap bagian secara rekursif, 
+# dan kemudian menggabungkannya menjadi satu array terurut. Kompleksitas waktunya adalah O(n log n) pada kasus terbaik, terburuk, dan rata-rata. 
+# Ini karena array dibagi menjadi dua bagian (O(log n)) dan proses penggabungan memerlukan O(n) waktu.
+# Merge Sort membutuhkan ruang tambahan O(n) untuk menyimpan hasil penggabungan.
+# Bubble Sort Analysis:
+#algoritma sederhana yang membandingkan elemen-elemen yang berdekatan dan menukarnya jika mereka tidak dalam urutan yang benar. 
+# Kompleksitas waktunya adalah O(n^2) dalam kasus terburuk dan rata-rata, karena membandingkan semua pasangan elemen yang berdekatan. 
+# Kasus terbaik adalah O(n), ketika array sudah terurut. Bubble Sort tidak memerlukan ruang tambahan selain beberapa variabel untuk menukar elemen, 
+# sehingga kompleksitas ruangnya adalah O(1).
+
+
 print("\nSorted with Bubble Sort: ", bubble_sort_data)
 print("Time taken by Bubble Sort: {:.6f} seconds".format(bubble_sort_time))
